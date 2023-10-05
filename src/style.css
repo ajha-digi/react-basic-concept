@@ -1,3 +1,7 @@
 input:focus {
     border: 5px solid green;
 }
+
+input#test:focus {
+    border: 10px solid red;
+}
