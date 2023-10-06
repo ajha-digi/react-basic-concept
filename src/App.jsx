@@ -1,4 +1,4 @@
-import WithHover from "./HOC/HoverHoc";
+import withHover from "./HOC/HoverHoc";
 import Second from "./Second";
 import Third from "./Third";
 
@@ -15,4 +15,5 @@ function App({count, handleHover}) {
   );
 }
 
-export default WithHover(App);
+// eslint-disable-next-line react-refresh/only-export-components
+export default withHover(App);

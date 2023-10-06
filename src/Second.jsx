@@ -1,6 +1,6 @@
 import withHover from "./HOC/HoverHoc";
 
-// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/prop-types, react-refresh/only-export-components
 function Second({count, handleHover}) {
 
   return (
@@ -11,4 +11,5 @@ function Second({count, handleHover}) {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default withHover(Second);

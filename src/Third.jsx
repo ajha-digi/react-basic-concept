@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import withHover from "./HOC/HoverHoc";
 
 // eslint-disable-next-line react/prop-types
