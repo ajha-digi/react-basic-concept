@@ -1,30 +1,18 @@
-import { useRef, useEffect } from "react";
-import "./style.css"
-function App() {
-  const inputRef = useRef();
+import WithHover from "./HOC/HoverHoc";
+import Second from "./Second";
+import Third from "./Third";
 
-  useEffect(() => {
-    // inputRef.current.focus();
-    inputRef.current.disabled = true;
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(inputRef.current.value);
-    inputRef.current.disabled = false;
-  };
-
+// eslint-disable-next-line react/prop-types
+function App({count, handleHover}) {
   return (
-    <>
-      <h1>Hello World !!</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          ref={inputRef}
-        />
-        <button type="submit">Display</button>
-      </form>
-    </>
+    <div>
+      <h1>{count}</h1>
+      <h2 onMouseEnter={handleHover}>Hover 1 here</h2>
+      <Second />
+      <Third />
+    </div>
+   
   );
 }
 
-export default App;
+export default WithHover(App);
