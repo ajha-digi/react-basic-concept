@@ -1,7 +1,8 @@
-import { useHover } from "./Hooks/useHover";
+import { useContext } from "react";
+import { HoverContext } from "./context/rootContext";
 
 function Second() {
-const [count, handleHover] = useHover()
+  const {count, handleHover} =useContext(HoverContext)
   return (
     <div>
       <h1>{count}</h1>
