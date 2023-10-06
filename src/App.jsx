@@ -1,9 +1,9 @@
-import WithHover from "./HOC/HoverHoc";
+import { useHover } from "./Hooks/useHover";
 import Second from "./Second";
 import Third from "./Third";
 
-// eslint-disable-next-line react/prop-types
-function App({count, handleHover}) {
+function App() {
+  const [count, handleHover] = useHover();
   return (
     <div>
       <h1>{count}</h1>
@@ -15,4 +15,4 @@ function App({count, handleHover}) {
   );
 }
 
-export default WithHover(App);
+export default App
